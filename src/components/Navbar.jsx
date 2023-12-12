@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className='navbar'>
             <span className="logo">LuminovaStride</span>
             <div className="links">
-                <Link to="about" spy={true} smooth={true} offset={0} duration={500}>Ürün hakkında</Link>
+                <Link classID='about' to="about" spy={true} smooth={true} offset={0} duration={500}>Ürün hakkında</Link>
                 <FontAwesomeIcon className='basket' icon={faBasketShopping} size="xl" />
             </div>
         </div>

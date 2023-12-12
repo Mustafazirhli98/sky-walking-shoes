@@ -2,31 +2,19 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 //introduction
-export const introductionAnimation = () => {
+gsap.registerPlugin(ScrollTrigger);
 
-    gsap.timeline().fromTo(".info-left", {
-        x: -100
-    }, {
+export const introductionAnimation = () => {
+    gsap.timeline({
         scrollTrigger: {
-            trigger: ".introduction",
+            trigger: ".info",
             start: "top center",
             end: "bottom center",
-            scrub: true
-        },
-        x: 0, stagger: 1, duration: 2, ease: "in"
-    });
-    gsap.timeline().fromTo(".info-right", {
-        x: 100
-    }, {
-        scrollTrigger: {
-            trigger: ".info-left",
-            start: "top center",
-            end: "bottom-center",
-            scrub: true
-        },
-        x: 0, stagger: 1, duration: 2, ease: "in"
+            scrub: 10,
+        }
     })
-}
+        .fromTo(".info", { opacity: 0 }, { opacity: 1, duration: 10, ease: "in", stagger: 10 });
+};
 
 //title
 export const titleAnimation = () => {

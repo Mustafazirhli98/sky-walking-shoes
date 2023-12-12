@@ -7,7 +7,6 @@ const Title = () => {
         titleAnimation()
     }, [])
 
-
     return (
         <div className='title'>
             <div className='title-text'>

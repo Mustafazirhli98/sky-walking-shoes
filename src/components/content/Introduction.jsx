@@ -33,7 +33,7 @@ const Introduction = () => {
           <img src={img3} />
         </div>
       </div>
-      <div className=" info-left animated2">
+      <div className="info info-left animated2">
         <div className='text'>
           <h5>Su Geçirmez Tasarım</h5>
           <p>Gökyüzü Yürüyüş Ayakkabıları, sizi yağmurda da yarı yolda bırakmaz! Su geçirmez tasarımı sayesinde, yağmurlu günlerde bile konforlu bir yürüyüş deneyimi yaşayabilirsiniz.</p>
@@ -42,7 +42,7 @@ const Introduction = () => {
           <img src={img7} />
         </div>
       </div>
-      <div className=" info-right animated3">
+      <div className="info info-right animated3">
         <div className='text'>
           <h5>Enerji Depolayan Taban</h5>
           <p>Ayakkabı tabanındaki özel malzeme, yürüyüş esnasında üretilen enerjiyi depolar ve size daha enerjik bir adım atma gücü sağlar. Yürüdükçe enerji depolayın!</p>
@@ -51,7 +51,7 @@ const Introduction = () => {
           <img src={img5} />
         </div>
       </div>
-      <div className=" info-left animated4">
+      <div className="info info-left animated4">
         <div className='text'>
           <h5>Çevre Dostu Malzemeler</h5>
           <p>Şimdi Gökyüzü Yürüyüş Ayakkabıları'nı satın alın ve özel lansman indiriminden faydalanın! Bu fırsatı kaçırmayın, bulutların üzerindeki yürüyüş deneyiminin keyfini çıkarın.</p>
