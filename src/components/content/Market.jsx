@@ -2,39 +2,16 @@ import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import { gsap, ScrollTrigger } from 'gsap/all'
+import { marketAnimation } from '../../utils'
 
 const Market = () => {
     const [isFlip, setIsFlip] = useState(false)
 
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
 
-        const animation = () => {
-            const triggerElement = ".market";
 
-            gsap.fromTo(
-                triggerElement,
-                {
-                    y: -100, // Başlangıç değeri
-                    opacity: 0, // Başlangıçta belirlediğiniz diğer özellikler
-                },
-                {
-                    y: 0, // Bitiş değeri
-                    opacity: 1, // Diğer özellikler
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: triggerElement,
-                        start: "top center",
-                        end: "bottom center",
-                        scrub: true,
-                    },
-                }
-            );
-        };
-
-        animation();
-
+        marketAnimation()
     }, []);
     return (
 

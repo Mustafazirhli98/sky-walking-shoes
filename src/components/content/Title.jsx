@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react'
 import image from "../../assets/images/image.jpeg"
-import gsap from 'gsap'
+import { titleAnimation } from '../../utils'
 
 const Title = () => {
+    useEffect(() => {
+        titleAnimation()
+    }, [])
+
 
     return (
         <div className='title'>

@@ -94,25 +94,27 @@ body {
     padding: 100px;
 }
 
-.info {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info div {
+.text {
     padding: 5px;
     /* flex: 0.4; */
 }
 
 .info-right {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FF6347;
     flex-direction: row-reverse;
 }
 
 .info-left {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FFE4C4
 }
 

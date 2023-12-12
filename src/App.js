@@ -8,22 +8,6 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 function App() {
 
-  useEffect(() => {
-    const t1 = gsap.timeline()
-    t1.fromTo(".container", {
-      y: -5,
-      opacity: 0
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "power3",
-      delay: 1
-    }
-
-    );
-  }, [])
-
   return (
     <div className="container">
       <Navbar />
@@ -38,9 +22,6 @@ export default App;
 
 
 //TODO:
-//GSAP Scroll animasyonunu çöz
-//GSAP ekle.
-//route ekle
 //Introduction oluştur (data ile oluştur).
 //market oluştur.
 //satın alma işlevi ve animasyonu ekle.
