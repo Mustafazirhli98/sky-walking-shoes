@@ -4,11 +4,6 @@ import gsap from 'gsap'
 
 const Title = () => {
 
-    useEffect(() => {
-        const t1 = gsap.timeline()
-        t1.fromTo(".title", { y: -5, opacity: 0 }, { y: 0, opacity: 1 }, "+=1");
-    }, [])
-
     return (
         <div className='title'>
             <div className='title-text'>

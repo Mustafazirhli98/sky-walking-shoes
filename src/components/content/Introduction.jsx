@@ -8,14 +8,62 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
 const Introduction = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const animationLeft = () => {
+      const triggerElement = ".info-left";
+
+      gsap.fromTo(
+        triggerElement,
+        {
+          x: -100,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: triggerElement,
+            start: "top 50%",
+            end: ".market",
+            scrub: 0.5
+          },
+        }
+      );
+      const triggerElement2 = ".info-right";
+
+      gsap.fromTo(
+        triggerElement2,
+        {
+          x: 100,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: triggerElement,
+            start: "bottom 90%",
+            end: ".market",
+            scrub: 0.5
+          },
+        }
+      );
+
+    };
 
 
- 
 
+    animationLeft();
+
+  }, []);
   return (
     <div className='introduction'>
-      <div className="info info-left">
-        <div className='text'>
+      <div className="info info-left" id='about'>
+        <div className='text' id='ürünHakkında'>
           <h5>Uçan Hafiflik</h5>
           <p>Gökyüzü Yürüyüş Ayakkabıları, hafifliğiyle sizi adeta uçuracak! Ayaklarınıza giyildiğinde, yerden kopmuşçasına hafif hissedecek ve adeta bulutların üzerinde yürüyormuş gibi hissedeceksiniz.</p>
         </div>
