@@ -31,12 +31,38 @@ const Navbar = () => {
     }, [])
 
     return (
-        <div className='navbar' style={style.navbar} onMouseEnter={() => setLowOpacity(false)} onMouseLeave={() => setLowOpacity(window.scrollY > 100 ? true : false)}>
-            <NavLink to={PATHS.DEFAULT} className="logo navLink">LuminovaStride</NavLink>
-            <div className="links">
-                <Link to="about" className='aboutLink' spy={true} smooth={true} offset={0} duration={500}>Ürün hakkında</Link>
-                <NavLink to={PATHS.BASKET}>
-                    <FontAwesomeIcon onMouseEnter={() => setIsFlip(!isFlip)} onMouseLeave={() => setIsFlip(!isFlip)} className='basketIcon navLink' flip={isFlip} icon={faBasketShopping} size="xl" />
+        <div
+            className='navbar'
+            style={style.navbar}
+            onMouseEnter={() => setLowOpacity(false)}
+            onMouseLeave={() => setLowOpacity(window.scrollY > 100 ? true : false)}>
+            <NavLink
+                to={PATHS.DEFAULT}
+                className="logo"
+                style={style.navLink}>
+                LuminovaStride
+            </NavLink>
+            <div
+                className="links">
+                <Link
+                    to="about"
+                    className='aboutLink'
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}>
+                    Ürünler Hakkında
+                </Link>
+                <NavLink
+                    to={PATHS.BASKET}>
+                    <FontAwesomeIcon
+                        onMouseEnter={() => setIsFlip(!isFlip)}
+                        onMouseLeave={() => setIsFlip(!isFlip)}
+                        className="basketIcon"
+                        style={style.navLink}
+                        flip={isFlip}
+                        icon={faBasketShopping}
+                        size="xl" />
                     {
                         amount > 0 && (
                             <span className='amount'>{amount}</span>
@@ -59,6 +85,11 @@ const style = {
         position: "sticky",
         top: 0,
         zIndex: 999,
+    },
+
+    navLink: {
+        textDecoration: "none",
+        color: "#fff",
     }
 }
 export default Navbar

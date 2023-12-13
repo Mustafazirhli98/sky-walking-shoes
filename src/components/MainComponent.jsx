@@ -4,11 +4,11 @@ import Introduction from "./content/Introduction"
 import Market from "./content/Market"
 
 const MainComponent = () => (
-    <div className='MainComponent'>
+    <>
         <Title />
         <Introduction />
         <Market />
-    </div>
+    </>
 )
 
 
