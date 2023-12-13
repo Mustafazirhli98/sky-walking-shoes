@@ -44,7 +44,7 @@ export const titleAnimation = () => {
 //market
 export const marketAnimation = () => {
     gsap.registerPlugin(ScrollTrigger);
-    const triggerElement = ".market";
+    const triggerElement = ".market-content";
     gsap.fromTo(
         triggerElement,
         {

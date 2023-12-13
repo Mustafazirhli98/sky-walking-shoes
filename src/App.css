@@ -9,7 +9,7 @@
 html,
 body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     font-family: 'Rethink Sans', sans-serif;
 }
 
@@ -18,15 +18,9 @@ body {
     height: 100%
 }
 
-/* navbar */
-
-.navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 8px;
-    background-color: #93BFA3;
+/* navbar jsx olarak eklendi */
+.navLink {
+    text-decoration: none;
     color: #fff;
 }
 
@@ -37,8 +31,16 @@ body {
     margin-left: 500px;
 }
 
-.links .basket {
+.links .basketIcon {
     margin-left: 30px;
+}
+
+.basketIcon:hover {
+    color: black;
+}
+
+.aboutLink:hover {
+    color: black;
 }
 
 .logo {
@@ -46,7 +48,11 @@ body {
     cursor: pointer;
 }
 
-.basket {
+.logo:hover {
+    color: black;
+}
+
+.basketIcon {
     cursor: pointer;
 }
 
@@ -150,8 +156,6 @@ body {
 /* market */
 
 .market {
-    position: relative;
-    top: -60px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -178,7 +182,7 @@ body {
     font-size: 17px;
 }
 
-.market-content .basket {
+.market-content .basketIcon {
     cursor: pointer;
 }
 
@@ -196,4 +200,59 @@ body {
 .footer ul li {
     list-style-type: none;
     margin: 15px;
+}
+
+/* basket */
+
+.basket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.basket-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping-card {
+    margin: 50px 20px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+
+.shopping-card .delete {
+    width: 20px;
+    margin-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.product {
+    margin-top: 10px;
+}
+
+.product-detail {
+    text-align: center;
+}
+
+
+.product img {
+    width: 200px;
+}
+
+.confirm {
+    margin: 15px 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 2px;
 }

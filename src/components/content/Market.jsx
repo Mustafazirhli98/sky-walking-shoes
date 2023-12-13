@@ -1,7 +1,6 @@
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
-import { gsap, ScrollTrigger } from 'gsap/all'
 import { marketAnimation } from '../../utils'
 
 const Market = () => {
@@ -19,7 +18,7 @@ const Market = () => {
             <div className='market-content'>
                 <h1>Şimdi satın alın</h1>
                 <p>Hemen sipariş verin ve yürüyüş deneyiminizi bulutların üzerine taşıyın! Gökyüzü Yürüyüş Ayakkabıları ile adımlarınızın ötesine geçin.</p>
-                <FontAwesomeIcon onMouseEnter={() => setIsFlip(!isFlip)} onMouseLeave={() => setIsFlip(!isFlip)} className='basket' flip={isFlip} icon={faBasketShopping} size="2xl" />
+                <FontAwesomeIcon onMouseEnter={() => setIsFlip(!isFlip)} onMouseLeave={() => setIsFlip(!isFlip)} className='basketIcon' flip={isFlip} icon={faBasketShopping} size="2xl" />
             </div>
             <div className="footer">
                 <ul>
