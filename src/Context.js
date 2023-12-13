@@ -4,14 +4,25 @@ const Context = createContext();
 
 const ContextProvider = ({ children }) => {
     const [basket, setBasket] = useState([])
-    const [empty, setEmpty] = useState(true)
+    const [amount, setAmount] = useState(0)
 
-    const upgradeBasket = (item) => {
-        setBasket(item)
+    const addBasket = (product) => {
+        if (!basket.find(item => item.id === product.id)) {
+            setBasket([...basket, product])
+            setAmount(prevAmount => prevAmount + 1);
+        } else {
+            console.log("ürün zaten sepette")
+        }
     }
+
+    const deleteProduct = (product) => {
+        const newBasket = basket.filter(item => item.id !== product.id)
+        setBasket(newBasket)
+        setAmount(prevAmount => prevAmount - 1)
+    }
+
     const value = [
-        empty, setEmpty,
-        basket, setBasket, upgradeBasket
+        basket, setBasket, addBasket, deleteProduct, amount, setAmount
     ]
 
     return (

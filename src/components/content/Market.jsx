@@ -7,17 +7,12 @@ import { Context } from '../../Context'
 
 const Market = () => {
 
-    const [empty, isEmpty, basket, setBasket] = useContext(Context)
+    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount] = useContext(Context)
 
     useEffect(() => {
         marketAnimation()
     }, []);
 
-    const addBasket = (product) => {
-        if (!basket.find(item => item.id === product.id)) {
-            setBasket([...basket, product])
-        } else console.log("ürün zaten sepette")
-    }
 
 
     return (

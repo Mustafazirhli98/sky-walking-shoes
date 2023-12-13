@@ -4,14 +4,11 @@ import img from "./../../assets/images/Img2.jpeg"
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { data } from '../../Data/Store'
+import { NavLink } from 'react-router-dom'
+import { PATHS } from '../../routes/Routes'
 
 const Basket = () => {
-    const [empty, setEmpty, basket, setBasket] = useContext(Context)
-
-    const deleteProduct = (product) => {
-        const newBasket = basket.filter(item => item.id !== product.id)
-        setBasket(newBasket)
-    }
+    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount] = useContext(Context)
 
     return (
         <>
@@ -19,7 +16,10 @@ const Basket = () => {
                 basket.length <= 0 ?
                     <div className="basket">
                         <div className='basket-content'>
-                            sepetiz boş
+                            <div className="empty-basket">
+                                <span>sepetiz boş.</span>
+                                <NavLink to={PATHS.MARKET} className="redirectMarket">Şimdi ürünlere göz atın.</NavLink>
+                            </div>
                         </div>
                     </div>
                     :

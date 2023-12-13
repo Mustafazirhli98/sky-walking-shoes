@@ -9,8 +9,9 @@ import { Context } from '../Context'
 
 const Navbar = () => {
     const [lowOpacity, setLowOpacity] = useState(false);
-    const [isFlip, setIsFlip] = useState(false)
-    const [empty] = useContext(Context)
+    const [isFlip, setIsFlip] = useState(false);
+    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount] = useContext(Context);
+    console.log(amount)
     useEffect(() => {
         gsap.to(".navbar", {
             opacity: lowOpacity ? 0.5 : 1,
@@ -36,14 +37,12 @@ const Navbar = () => {
                 <Link to="about" className='aboutLink' spy={true} smooth={true} offset={0} duration={500}>Ürün hakkında</Link>
                 <NavLink to={PATHS.BASKET}>
                     <FontAwesomeIcon onMouseEnter={() => setIsFlip(!isFlip)} onMouseLeave={() => setIsFlip(!isFlip)} className='basketIcon navLink' flip={isFlip} icon={faBasketShopping} size="xl" />
+                    {
+                        amount > 0 && (
+                            <span className='amount'>{amount}</span>
+                        )
+                    }
                 </NavLink>
-                {/* {
-                    !empty && (
-                        <div>
-                            dolu
-                        </div>
-                    )
-                } */}
             </div>
         </div>
     )
