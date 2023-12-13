@@ -1,32 +1,39 @@
 import React, { useContext } from 'react'
 import { Context } from '../../Context'
+import img from "./../../assets/images/Img2.jpeg"
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { data } from '../../Data/Store'
 
 const Basket = () => {
-    const [empty, setEmpty] = useContext(Context)
+    const [empty, setEmpty, basket, setBasket] = useContext(Context)
+
+    const deleteProduct = (product) => {
+        const newBasket = basket.filter(item => item.id !== product.id)
+        setBasket(newBasket)
+    }
+
     return (
         <>
             {
-                empty ?
+                basket.length <= 0 ?
                     <div className="basket">
                         <div className='basket-content'>
                             sepetiz boş
                         </div>
                     </div>
                     :
-                    <div div className="basket">
+                    <div className="basket">
                         <div className='basket-content'>
                             {
-                                data.map((item) => (
-                                    <div className='shopping-card'>
-                                        <FontAwesomeIcon className='delete' icon={faTrashCan} />
+                                basket.map((product, index) => (
+                                    <div className='shopping-card' key={index}>
+                                        <FontAwesomeIcon className='delete' icon={faTrashCan} onClick={() => deleteProduct(product)} />
                                         <div className="product">
-                                            <img src={item.img} alt='product' />
+                                            <img src={product.img} alt='product' />
                                             <div className="product-detail">
-                                                <h5>{item.description}</h5>
-                                                <span>{item.price}</span>
+                                                <h5>{product.description}</h5>
+                                                <span>{product.price}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -34,7 +41,8 @@ const Basket = () => {
                             }
                         </div>
                         <span className='confirm'>Sepeti Onayla</span>
-                    </div >
+                    </div>
+
             }
         </>
     )

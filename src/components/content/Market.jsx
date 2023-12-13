@@ -1,24 +1,47 @@
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { marketAnimation } from '../../utils'
+import { data } from '../../Data/Store'
+import { Context } from '../../Context'
 
 const Market = () => {
-    const [isFlip, setIsFlip] = useState(false)
 
+    const [empty, isEmpty, basket, setBasket] = useContext(Context)
 
     useEffect(() => {
-
-
         marketAnimation()
     }, []);
+
+    const addBasket = (product) => {
+        if (!basket.find(item => item.id === product.id)) {
+            setBasket([...basket, product])
+        } else console.log("ürün zaten sepette")
+    }
+
+
     return (
 
-        <div className='market'>
+        <div className='market' >
             <div className='market-content'>
                 <h1>Şimdi satın alın</h1>
                 <p>Hemen sipariş verin ve yürüyüş deneyiminizi bulutların üzerine taşıyın! Gökyüzü Yürüyüş Ayakkabıları ile adımlarınızın ötesine geçin.</p>
-                <FontAwesomeIcon onMouseEnter={() => setIsFlip(!isFlip)} onMouseLeave={() => setIsFlip(!isFlip)} className='basketIcon' flip={isFlip} icon={faBasketShopping} size="2xl" />
+            </div>
+            <div className='market_products'>
+                {
+                    data.map((product, index) => (
+                        <div className="product-card" key={index}>
+                            <img src={product.img} alt='product' />
+                            <div className="product-card_detail">
+                                <h5>{product.description}</h5>
+                                <div>{product.price}</div>
+                                <div className='add-Basket' onClick={() => {
+                                    addBasket(product)
+                                }}>Sepete ekle</div>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
             <div className="footer">
                 <ul>

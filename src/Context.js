@@ -3,11 +3,15 @@ import React, { createContext, useState } from 'react'
 const Context = createContext();
 
 const ContextProvider = ({ children }) => {
-    const [empty, setEmpty] = useState(false)
+    const [basket, setBasket] = useState([])
+    const [empty, setEmpty] = useState(true)
 
-
+    const upgradeBasket = (item) => {
+        setBasket(item)
+    }
     const value = [
-        empty, setEmpty
+        empty, setEmpty,
+        basket, setBasket, upgradeBasket
     ]
 
     return (
