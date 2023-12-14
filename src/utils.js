@@ -20,7 +20,7 @@ export const introductionAnimation = () => {
 
 //title
 export const titleAnimation = () => {
-    gsap.fromTo("title", {
+    gsap.fromTo(".title", {
         x: -100,
         opacity: 0
     }, {
@@ -30,7 +30,7 @@ export const titleAnimation = () => {
         ease: "power3",
     }
     );
-    gsap.to(".title-img", {
+    gsap.to(".title_img", {
         rotationX: 360,
         duration: 2,
         scrollTrigger: {

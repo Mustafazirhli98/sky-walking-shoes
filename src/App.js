@@ -8,6 +8,7 @@ import MarketPlace from './components/content/MarketPlace';
 
 
 function App() {
+
   return (
     <div className="container">
       <Navbar />
@@ -16,6 +17,7 @@ function App() {
         <Route path={PATHS.BASKET} element={<Basket />} />
         <Route path={PATHS.MARKET_PLACE} element={<MarketPlace />} />
       </Routes>
+
     </div>
   );
 }
@@ -24,8 +26,11 @@ export default App;
 
 
 //TODO:
-//Sepette iken navbarda ürün hakkında yerine anasayfa yazsın.(Navbarroutemapper fonksiyonu yaz.)
-//Sepetten yönlendirileceğin market'i ayrı bir component ve path ile oluştur.
-//Sayfada aşağı inerken beni yukarı çıkartacak bir button belirsin.
+
+// Şimdi al kısmı kenardan uçarak gelecek,
+// fontsize gibi ufak detaylar tamamlanacak
+//Responsive
 //satın alma işlevi ve animasyonu ekle.
+//refactoring
+//bir üründen kaç tane eklendiğini ürün kartında göster ve eksiltme özelliği gelsin.
 //Introduction oluştur (data ile oluştur).

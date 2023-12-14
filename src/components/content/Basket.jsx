@@ -1,14 +1,12 @@
 import React, { useContext } from 'react'
 import { Context } from '../../Context'
-import img from "./../../assets/images/Img2.jpeg"
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { data } from '../../Data/Store'
 import { NavLink } from 'react-router-dom'
 import { PATHS } from '../../routes/Routes'
 
 const Basket = () => {
-    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount,urlLocation, setUrlLocation] = useContext(Context)
+    const {basket, deleteProduct}  = useContext(Context)
 
     return (
         <>

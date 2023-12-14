@@ -6,6 +6,7 @@ const ContextProvider = ({ children }) => {
     const [basket, setBasket] = useState([]);
     const [amount, setAmount] = useState(0);
     const [urlLocation, setUrlLocation] = useState("");
+    const [upperButton, setUpperButton] = useState(false);
 
     const addBasket = (product) => {
         if (!basket.find(item => item.id === product.id)) {
@@ -22,9 +23,10 @@ const ContextProvider = ({ children }) => {
         setAmount(prevAmount => prevAmount - 1)
     }
 
-    const value = [
-        basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation
-    ]
+    const value = {
+        basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation,
+        upperButton, setUpperButton
+    }
 
     return (
 

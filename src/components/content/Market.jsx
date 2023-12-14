@@ -7,7 +7,7 @@ import { Context } from '../../Context'
 
 const Market = () => {
 
-    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation] = useContext(Context)
+    const { addBasket } = useContext(Context)
 
     useEffect(() => {
         marketAnimation()
@@ -18,7 +18,7 @@ const Market = () => {
         <div className='market' >
             <div className='market-content'>
                 <h1>Şimdi satın alın</h1>
-                <p>Hemen sipariş verin ve yürüyüş deneyiminizi bulutların üzerine taşıyın! Gökyüzü Yürüyüş Ayakkabıları ile adımlarınızın ötesine geçin.</p>
+                <p>Sınırlı sayıdaki ürünler tükenmeden şimdi alın.</p>
             </div>
             <div className='market_products'>
                 {

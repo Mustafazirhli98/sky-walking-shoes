@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@500&family=Ubuntu:wght@400;500;700&display=swap');
 
+:root {
+    /* primary colors */
+    --primary-color1: #121425f2;
+    --primary-color2: #2d375b;
+    --primary-color3: #6d65a4;
+    --primary-color4: #be9bea;
+    --primary-color5: #f8caed;
+    /* secondary color*/
+    --secondary-color1: #ffe4c4c7;
+    --secondary-color2: #f5cc9cc7;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -19,34 +31,67 @@ body {
     height: 100%
 }
 
-
-/* navBar hover*/
-.basketIcon {
-    margin-left: 30px;
+.upperButton {
+    position: fixed;
+    top: 50%;
+    left: 97%;
+    width: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color1);
     color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.basketIcon:hover {
-    color: black;
+.upperButton:hover {
+    background-color: var(--primary-color2);
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 100px;
+    background-color: var(--primary-color1);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .logo {
     color: #fff;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .logo:hover {
-    color: black;
+    font-size: 27px;
+}
+
+.basketIcon {
+    margin-left: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.basketIcon:hover {
+    color: var(--primary-color5);
 }
 
 .aboutLink:hover {
-    color: black;
+    font-size: 18px;
 }
 
 .notAllowed {
     cursor: not-allowed;
 }
-
-/* navBar hover end */
 
 .amount {
     position: relative;
@@ -61,40 +106,70 @@ body {
     border-radius: 5px;
 }
 
-
-
 .links {
     cursor: pointer;
     margin: 40px;
     font-size: 17px;
 }
 
-.logo {
-    font-size: 25px;
-    cursor: pointer;
+/* TITLE */
+
+.title {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--secondary-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
 }
 
-.logo:hover {
-    color: black;
+.title_text {
+    flex: 0.8;
+    position: relative;
+    top: -10%;
+    padding-left: 10px
 }
 
-.basketIcon {
-    cursor: pointer;
+.title_text h4 {
+    font-size: 50px
 }
 
+.title_text p {
+    margin-top: 30px;
+    font-size: 17px
+}
+
+.title_img {
+    flex: 1;
+    height: 500px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.title_img img {
+    width: 70%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #0f0e18, #232b4a, #544e7f, #9c7bcf, #f09ddc);
+
+    border-image-slice: 1;
+    border-image-repeat: round;
+}
 
 /* introduction */
 
 .introduction {
     display: flex;
     flex-wrap: wrap;
-    background-color: #F5F5DC;
+    background-color: var(--primary-color1);
     padding: 100px;
 }
 
 .text {
     padding: 5px;
-    /* flex: 0.4; */
 }
 
 .info-right {
@@ -103,8 +178,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FF6347;
+    /* background-color: var(--primary-color2); */
     flex-direction: row-reverse;
+    color: #fff
 }
 
 .info-left {
@@ -113,7 +189,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFE4C4
+    background-color: #FFE4C4;
 }
 
 .text {
@@ -150,6 +226,7 @@ body {
     height: 100%;
     width: 100%;
     padding-top: 70px;
+    background-color: rgba(255, 255, 255, 0.738);
 }
 
 .market-content {
@@ -179,30 +256,45 @@ body {
 
 .product-card {
     margin: 30px;
-    border: 1px solid;
+    border: 1px solid var(--primary-color4);
+    border-radius: 10px;
     padding: 10px;
 }
 
 .product-card img {
     width: 200px;
+    border-radius: 5px;
 }
 
 .product-card_detail {
+    margin: 10px;
     text-align: center;
+}
+
+.product-card_detail h5 {
+    margin: 6px;
 }
 
 .add-Basket {
     border: 1px solid;
     font-size: 15px;
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
-    background-color: wheat;
+    background-color: var(--primary-color2);
+    color: #fff;
+    border-radius: 10px;
+    border-color: transparent;
     cursor: pointer;
+}
+
+.add-Basket:hover {
+    background-color: var(--primary-color3);
 }
 
 .footer {
     position: relative;
-    bottom: -40;
+    margin: 30px 30px 20px 30px;
+    bottom: 0;
 }
 
 .footer ul {
@@ -232,6 +324,15 @@ body {
     margin-bottom: 20px;
 }
 
+.empty-basket .redirectMarket {
+    color: var(--primary-color3);
+    text-decoration: underline;
+}
+
+.empty-basket .redirectMarket:hover {
+    color: var(--primary-color1)
+}
+
 .basket {
     display: flex;
     flex-direction: column;
@@ -250,11 +351,11 @@ body {
 }
 
 .shopping-card {
-    margin: 50px 20px;
-    border: 1px solid;
+    margin: 40px 30px;
+    border: 1px solid var(--primary-color4);
+    border-radius: 10px;
     padding: 10px;
 }
-
 
 .shopping-card .delete {
     width: 20px;
@@ -284,4 +385,9 @@ body {
     border: 1px solid;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.confirm:hover {
+    background-color: var(--primary-color3);
+    color: #fff;
 }

@@ -4,15 +4,14 @@ import gsap from 'gsap'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
 import { PATHS } from '../routes/Routes'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Context } from '../Context'
 import { GetUrlInfo, NavbarRouteMapper } from '../utils'
-import { NavbarRoutes } from '../routes/NavbarRoutes'
 
 const Navbar = () => {
     const [lowOpacity, setLowOpacity] = useState(false);
     const [isFlip, setIsFlip] = useState(false);
-    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation] = useContext(Context);
+    const { basket, amount } = useContext(Context);
     const currentURL = GetUrlInfo();
 
 
@@ -39,7 +38,6 @@ const Navbar = () => {
     return (
         <div
             className='navbar'
-            style={style.navbar}
             onMouseEnter={() => setLowOpacity(false)}
             onMouseLeave={() => setLowOpacity(window.scrollY > 100 ? true : false)}>
             <NavLink
@@ -76,25 +74,6 @@ const Navbar = () => {
             </div >
         </div >
     )
-}
-const style = {
-    navbar: {
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "8px 100px",
-        backgroundColor: "#93BFA3",
-        color: "#fff",
-        position: "sticky",
-        top: 0,
-        zIndex: 999,
-    },
-
-    navLink: {
-        textDecoration: "none",
-        color: "#fff",
-    }
 }
 export default Navbar
 
