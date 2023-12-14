@@ -3,8 +3,9 @@ import React, { createContext, useState } from 'react'
 const Context = createContext();
 
 const ContextProvider = ({ children }) => {
-    const [basket, setBasket] = useState([])
-    const [amount, setAmount] = useState(0)
+    const [basket, setBasket] = useState([]);
+    const [amount, setAmount] = useState(0);
+    const [urlLocation, setUrlLocation] = useState("");
 
     const addBasket = (product) => {
         if (!basket.find(item => item.id === product.id)) {
@@ -22,7 +23,7 @@ const ContextProvider = ({ children }) => {
     }
 
     const value = [
-        basket, setBasket, addBasket, deleteProduct, amount, setAmount
+        basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation
     ]
 
     return (

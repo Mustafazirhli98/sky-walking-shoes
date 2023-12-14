@@ -8,12 +8,12 @@ const Title = () => {
     }, [])
 
     return (
-        <div style={style.title}>
+        <div className='title' style={style.title}>
             <div style={style.titleText} >
                 <h4 style={style.titleTexth4}>Merhaba ayakkabı tutlunları!</h4>
                 <p style={style.titleTextP}>Sizi, adımlarınızı gökyüzünde atmaya davet ediyoruz! Gökyüzü Yürüyüş Ayakkabıları, sadece bir adım ötesinde bulutları hissetmenizi sağlayan yenilikçi bir ayakkabı deneyimidir.</p>
             </div>
-            <div style={style.titleImg}>
+            <div className='title-img' style={style.titleImg}>
                 <img src={image} style={style.titleImgImg} />
             </div>
         </div >

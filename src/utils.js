@@ -1,5 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useLocation } from "react-router-dom";
+import { NavbarRoutes } from "./routes/NavbarRoutes";
 
 //introduction
 gsap.registerPlugin(ScrollTrigger);
@@ -18,7 +20,7 @@ export const introductionAnimation = () => {
 
 //title
 export const titleAnimation = () => {
-    gsap.fromTo(".title", {
+    gsap.fromTo("title", {
         x: -100,
         opacity: 0
     }, {
@@ -65,3 +67,17 @@ export const marketAnimation = () => {
         }
     );
 };
+
+
+//navbar routes
+
+export const GetUrlInfo = () => {
+    const location = useLocation();
+    return location.pathname;
+}
+
+export const NavbarRouteMapper = (url) => {
+    if (url === "/")
+        return "Ürün Hakkında"
+    else return "Confirm"
+}

@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 import { PATHS } from '../../routes/Routes'
 
 const Basket = () => {
-    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount] = useContext(Context)
+    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount,urlLocation, setUrlLocation] = useContext(Context)
 
     return (
         <>
@@ -18,7 +18,7 @@ const Basket = () => {
                         <div className='basket-content'>
                             <div className="empty-basket">
                                 <span>sepetiz boş.</span>
-                                <NavLink to={PATHS.MARKET} className="redirectMarket">Şimdi ürünlere göz atın.</NavLink>
+                                <NavLink to={PATHS.MARKET_PLACE} className="redirectMarket">Şimdi ürünlere göz atın.</NavLink>
                             </div>
                         </div>
                     </div>

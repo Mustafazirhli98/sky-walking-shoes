@@ -7,13 +7,11 @@ import { Context } from '../../Context'
 
 const Market = () => {
 
-    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount] = useContext(Context)
+    const [basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation] = useContext(Context)
 
     useEffect(() => {
         marketAnimation()
     }, []);
-
-
 
     return (
 
