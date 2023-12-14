@@ -17,7 +17,6 @@ function App() {
         <Route path={PATHS.BASKET} element={<Basket />} />
         <Route path={PATHS.MARKET_PLACE} element={<MarketPlace />} />
       </Routes>
-
     </div>
   );
 }
@@ -26,11 +25,12 @@ export default App;
 
 
 //TODO:
-
-// Şimdi al kısmı kenardan uçarak gelecek,
-// fontsize gibi ufak detaylar tamamlanacak
-//Responsive
-//satın alma işlevi ve animasyonu ekle.
-//refactoring
 //bir üründen kaç tane eklendiğini ürün kartında göster ve eksiltme özelliği gelsin.
-//Introduction oluştur (data ile oluştur).
+//Satın almak için kart bilgilerinin girildiği bir component oluştur.(Confirm ile o sayfaya yönlendirilecek)
+//satın alma butonu ile satın alma işlevi ve animasyonu ekle.
+//Responsive
+// Şimdi al kısmı kenardan uçarak gelecek(animatecss de deneyebilirsin).
+//refactoring.
+//Videosunu çekip md dosyasına aktar.
+//Proje sonu commitini yap.
+//Projeyi yayınla.

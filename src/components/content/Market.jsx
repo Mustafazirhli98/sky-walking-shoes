@@ -17,7 +17,7 @@ const Market = () => {
 
         <div className='market' >
             <div className='market-content'>
-                <h1>Şimdi satın alın</h1>
+                <h1 className='buyNow'>Şimdi satın alın</h1>
                 <p>Sınırlı sayıdaki ürünler tükenmeden şimdi alın.</p>
             </div>
             <div className='market_products'>

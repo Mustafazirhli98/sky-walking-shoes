@@ -132,12 +132,13 @@ body {
 }
 
 .title_text h4 {
-    font-size: 50px
+    font-size: 60px
 }
 
 .title_text p {
     margin-top: 30px;
-    font-size: 17px
+    font-size: 17px;
+    line-height: 25px;
 }
 
 .title_img {
@@ -178,9 +179,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--primary-color2); */
     flex-direction: row-reverse;
-    color: #fff
+    color: #fff;
+    font-size: 17px;
+    line-height: 25px;
 }
 
 .info-left {
@@ -190,6 +192,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #FFE4C4;
+    font-size: 17px;
+    line-height: 25px;
 }
 
 .text {
@@ -273,6 +277,8 @@ body {
 
 .product-card_detail h5 {
     margin: 6px;
+    font-size: 14px;
+    color: var(--primary-color1);
 }
 
 .add-Basket {
@@ -385,6 +391,7 @@ body {
     border: 1px solid;
     border-radius: 2px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .confirm:hover {

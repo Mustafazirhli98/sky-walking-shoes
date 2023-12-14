@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useLocation } from "react-router-dom";
-import { NavbarRoutes } from "./routes/NavbarRoutes";
 
 //introduction
 gsap.registerPlugin(ScrollTrigger);
