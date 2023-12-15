@@ -5,6 +5,7 @@ import { PATHS } from './routes/Routes';
 import MainComponent from './components/MainComponent';
 import Navbar from './components/Navbar';
 import MarketPlace from './components/content/MarketPlace';
+import Confirm from './components/content/Confirm';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path={PATHS.DEFAULT} element={<MainComponent />} />
         <Route path={PATHS.BASKET} element={<Basket />} />
         <Route path={PATHS.MARKET_PLACE} element={<MarketPlace />} />
+        <Route path={PATHS.CONFIRM} element={<Confirm />} />
       </Routes>
     </div>
   );
@@ -25,9 +27,7 @@ export default App;
 
 
 //TODO:
-//bir üründen kaç tane eklendiğini ürün kartında göster ve eksiltme özelliği gelsin.
-//Satın almak için kart bilgilerinin girildiği bir component oluştur.(Confirm ile o sayfaya yönlendirilecek)
-//satın alma butonu ile satın alma işlevi ve animasyonu ekle.
+//satın alma butonu ile satın alma işlevi ve animasyonu ekle. Eğer kullanıcı bilgisi girilmediyse bilgi istesin.
 //Responsive
 // Şimdi al kısmı kenardan uçarak gelecek(animatecss de deneyebilirsin).
 //refactoring.

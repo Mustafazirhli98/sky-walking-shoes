@@ -67,6 +67,13 @@ export const marketAnimation = () => {
     );
 };
 
+//credit-card
+export const creditCardAnimation = () => {
+    gsap.to(".credit-card", {
+        rotationX: 360,
+        duration: 2,
+    })
+}
 
 //navbar routes
 

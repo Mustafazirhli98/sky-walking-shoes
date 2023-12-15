@@ -10,11 +10,30 @@ const ContextProvider = ({ children }) => {
 
     const addBasket = (product) => {
         if (!basket.find(item => item.id === product.id)) {
-            setBasket([...basket, product])
+            setBasket([...basket, { ...product, quantity: 1 }]);
             setAmount(prevAmount => prevAmount + 1);
         } else {
-            console.log("ürün zaten sepette")
+            const productAmount = basket.map(item =>
+                item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+            );
+            setBasket(productAmount);
+            setAmount(prevAmount => prevAmount + 1);
         }
+    };
+
+    const decreaseQuantity = (product) => {
+        const updatedBasket = basket.map(item =>
+            product.id === item.id ? { ...item, quantity: product.quantity - 1 } : item
+        )
+        setBasket(updatedBasket)
+        setAmount(prevAmount => prevAmount - 1)
+    }
+    const increaseQuantity = (product) => {
+        const updatedBasket = basket.map(item =>
+            product.id === item.id ? { ...item, quantity: product.quantity + 1 } : item
+        )
+        setBasket(updatedBasket)
+        setAmount(prevAmount => prevAmount + 1)
     }
 
     const deleteProduct = (product) => {
@@ -25,15 +44,13 @@ const ContextProvider = ({ children }) => {
 
     const value = {
         basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation,
-        upperButton, setUpperButton
+        upperButton, setUpperButton, decreaseQuantity, increaseQuantity
     }
 
     return (
-
         <Context.Provider value={value}>
             {children}
         </Context.Provider>
-
     )
 }
 

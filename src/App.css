@@ -93,6 +93,21 @@ body {
     cursor: not-allowed;
 }
 
+.confirmNav-button {
+    margin: 15px 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 2px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.confirmNav-button:hover {
+    background-color: var(--primary-color3);
+    color: #fff;
+}
+
 .amount {
     position: relative;
     top: -13px;
@@ -363,11 +378,27 @@ body {
     padding: 10px;
 }
 
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header_quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity {
+    width: 10px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
 .shopping-card .delete {
     width: 20px;
     margin-bottom: 5px;
-    display: block;
-    margin-left: auto;
     cursor: pointer;
 }
 
@@ -384,17 +415,93 @@ body {
     width: 200px;
 }
 
-.confirm {
+.confirmButton {
+    margin: 15px 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--primary-color4);
+    border-radius: 2px;
+    border-radius: 10px;
+    color: var(--primary-color1);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.confirmButton:hover {
+    background-color: var(--primary-color3);
+    color: #fff;
+}
+
+/* CONFIRM */
+
+.confirmPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.confirmPage-title {
+    margin-bottom: 30px;
+}
+
+.credit-card {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-color: var(--primary-color5);
+    border-radius: 20px;
+    border: 1px solid var(--primary-color1);
+    box-shadow: 2px 5px 30px 1px var(--primary-color1);
+    padding: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.credit-card input {
+    background-color: var(--primary-color3);
+    border-radius: 100px;
+    margin: 5px;
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    color: white;
+}
+
+.credit-card input:focus {
+    outline: none;
+}
+
+.finish {
+    width: 150px;
+    text-align: center;
     margin: 15px 10px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid;
     border-radius: 2px;
-    cursor: pointer;
     border-radius: 10px;
+    color: var(--primary-color1);
+    cursor: pointer;
 }
 
-.confirm:hover {
+.finish:hover {
     background-color: var(--primary-color3);
     color: #fff;
+}
+
+.label-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label input {
+    display: block;
 }

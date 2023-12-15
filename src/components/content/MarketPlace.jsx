@@ -6,7 +6,6 @@ const MarketPlace = () => {
     const { addBasket } = useContext(Context)
 
     return (
-        <div>
             <div className='market' >
                 <div className='market-content'>
                     <h1>Şimdi satın alın</h1>
@@ -28,7 +27,6 @@ const MarketPlace = () => {
                         ))
                     }
                 </div>
-                <span className='confirm'>Sepeti Onayla</span>
                 <div className="footer">
                     <ul>
                         <li>twitter</li>
@@ -37,7 +35,6 @@ const MarketPlace = () => {
                     </ul>
                 </div>
             </div>
-        </div>
     )
 }
 

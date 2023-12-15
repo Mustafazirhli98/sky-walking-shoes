@@ -46,16 +46,26 @@ const Navbar = () => {
                 LuminovaStride
             </NavLink>
             <div className="links">
-                <Link to="about"
-                    className={`aboutLink ${currentURL === "/basket" && basket.length <= 0 ? "notAllowed" : ""}`}
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500} >
-                    {
-                        NavbarRouteMapper(currentURL)
-                    }
-                </Link>
+                {
+                    currentURL === "/" ?
+                        <Link to="about"
+                            className="aboutLink"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500} >
+                            {
+                                NavbarRouteMapper(currentURL)
+                            }
+                        </Link> :
+                        <NavLink to={basket.length <= 0 ? undefined : "/confirm"}
+                            className={`confirmNav-button ${basket.length <= 0 ? "notAllowed" : ""}`}>
+                            {
+                                NavbarRouteMapper(currentURL)
+                            }
+                        </NavLink>
+                }
+
                 <NavLink
                     to={PATHS.BASKET}>
                     <FontAwesomeIcon

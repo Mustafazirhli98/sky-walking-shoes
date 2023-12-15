@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Context } from '../../Context'
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import { faMinus, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
 import { PATHS } from '../../routes/Routes'
 
 const Basket = () => {
-    const {basket, deleteProduct}  = useContext(Context)
+    const { basket, deleteProduct, decreaseQuantity, increaseQuantity } = useContext(Context)
 
     return (
         <>
@@ -26,7 +26,18 @@ const Basket = () => {
                             {
                                 basket.map((product, index) => (
                                     <div className='shopping-card' key={index}>
-                                        <FontAwesomeIcon className='delete' icon={faTrashCan} onClick={() => deleteProduct(product)} />
+                                        <div className="card-header">
+                                            {product.quantity > 0 && product.quantity !== 1 ?
+                                                <div className='card-header_quantity'>
+                                                    <FontAwesomeIcon className='quantity' icon={faMinus} onClick={() => decreaseQuantity(product)} />
+                                                    <span>{product.quantity}</span>
+                                                    <FontAwesomeIcon className='quantity' icon={faPlus} onClick={() => increaseQuantity(product)} />
+                                                </div>
+                                                :
+                                                <FontAwesomeIcon className='quantity' icon={faPlus} onClick={() => increaseQuantity(product)} />
+                                            }
+                                            <FontAwesomeIcon className='delete' icon={faTrashCan} onClick={() => deleteProduct(product)} />
+                                        </div>
                                         <div className="product">
                                             <img src={product.img} alt='product' />
                                             <div className="product-detail">
@@ -38,7 +49,7 @@ const Basket = () => {
                                 ))
                             }
                         </div>
-                        <span className='confirm'>Sepeti Onayla</span>
+                        <NavLink to={basket.length <= 0 ? undefined : "/confirm"} className='confirmButton'>Sepeti Onayla</NavLink>
                     </div>
 
             }
