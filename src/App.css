@@ -415,6 +415,10 @@ body {
     width: 200px;
 }
 
+.total {
+    color: var(--primary-color1)
+}
+
 .confirmButton {
     margin: 15px 10px;
     padding: 10px;
@@ -432,6 +436,7 @@ body {
     color: #fff;
 }
 
+
 /* CONFIRM */
 
 .confirmPage {
@@ -445,7 +450,15 @@ body {
 }
 
 .confirmPage-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
+}
+
+.confirmPage-title span {
+    margin-bottom: 20px;
 }
 
 .credit-card {
@@ -465,7 +478,7 @@ body {
     border: 1px solid var(--primary-color1);
     box-shadow: 2px 5px 30px 1px var(--primary-color1);
     padding: 50px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 40px;
 }
 

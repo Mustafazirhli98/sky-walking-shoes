@@ -1,4 +1,5 @@
 export const NavbarRoutes = {
     ABOUT: "about",
-    CONFIRM: "/confirm"
+    CONFIRM: "confirm",
+    MARKET_PLACE: "market"
 }

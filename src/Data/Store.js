@@ -11,49 +11,49 @@ export const data = [
     {
         img: img1,
         description: "Özel hızlı ayakkabı",
-        price: "4000₺",
+        price: 4000,
         id: 1
     },
     {
         img: img2,
         description: "Isıtıcılı uçan ayakkabı",
-        price: "5000₺",
+        price: 5000,
         id: 2
     },
     {
         img: img3,
         description: "Uzaktan kumandalı ayakkabı",
-        price: "4000₺",
+        price: 4000,
         id: 3
     },
     {
         img: img5,
         description: "Zıplama ayakkabısı",
-        price: "7000₺",
+        price: 7000,
         id: 4
     },
     {
         img: img6,
         description: "Teleport ayakkabısı",
-        price: "15000₺",
+        price: 15000,
         id: 5
     },
     {
         img: img7,
         description: "Gravity ayakkabı",
-        price: "7000₺",
+        price: 7000,
         id: 6
     },
     {
         img: img4,
         description: "Suyla çalışan ayakkabı",
-        price: "3000₺",
+        price: 3000,
         id: 7
     },
     {
         img: img8,
         description: "Yüksek hızlı ayakkabı",
-        price: "8000",
+        price: 8000,
         id: 8
     },
 

@@ -7,6 +7,7 @@ import { PATHS } from '../routes/Routes'
 import { NavLink } from 'react-router-dom'
 import { Context } from '../Context'
 import { GetUrlInfo, NavbarRouteMapper } from '../utils'
+import { NavbarRoutes } from '../routes/NavbarRoutes'
 
 const Navbar = () => {
     const [lowOpacity, setLowOpacity] = useState(false);
@@ -47,7 +48,7 @@ const Navbar = () => {
             </NavLink>
             <div className="links">
                 {
-                    currentURL === "/" ?
+                    currentURL === PATHS.DEFAULT ?
                         <Link to="about"
                             className="aboutLink"
                             spy={true}
@@ -58,14 +59,21 @@ const Navbar = () => {
                                 NavbarRouteMapper(currentURL)
                             }
                         </Link> :
-                        <NavLink to={basket.length <= 0 ? undefined : "/confirm"}
-                            className={`confirmNav-button ${basket.length <= 0 ? "notAllowed" : ""}`}>
-                            {
-                                NavbarRouteMapper(currentURL)
-                            }
-                        </NavLink>
+                        <>
+                            <NavLink to={basket.length <= 0 ? undefined : PATHS.CONFIRM}
+                                className={`confirmNav-button ${basket.length <= 0 ? "notAllowed" : ""}`}>
+                                {
+                                    NavbarRouteMapper(currentURL)
+                                }
+                            </NavLink>
+                            <NavLink to={NavbarRoutes.MARKET_PLACE}
+                                className={`confirmNav-button`}>
+                                {
+                                    Object.values(NavbarRoutes.MARKET_PLACE)
+                                }
+                            </NavLink>
+                        </>
                 }
-
                 <NavLink
                     to={PATHS.BASKET}>
                     <FontAwesomeIcon

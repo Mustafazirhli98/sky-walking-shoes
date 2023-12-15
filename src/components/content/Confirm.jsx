@@ -1,15 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { creditCardAnimation } from '../../utils'
+import { Context } from '../../Context'
 
 const Confirm = () => {
-
+    const { total } = useContext(Context)
     useEffect(() => {
         creditCardAnimation()
     }, [])
 
     return (
         <div className='confirmPage'>
-            <div className="confirmPage-title">Ödeme işlemi için kart üzerine bilgi girip onaylayınız.</div>
+            <div className="confirmPage-title">
+                <span>Ödeme işlemi için kart üzerine bilgi girip onaylayınız.</span>
+                <div className='total'>
+                    <span>Ödeme tutarı: </span>
+                    <b>{total}</b>
+                </div>
+            </div>
             <div className="credit-card">
                 <div className="label-group">
                     <label htmlFor="firstName">İsim:</label>

@@ -6,7 +6,13 @@ import { NavLink } from 'react-router-dom'
 import { PATHS } from '../../routes/Routes'
 
 const Basket = () => {
-    const { basket, deleteProduct, decreaseQuantity, increaseQuantity } = useContext(Context)
+    const { basket, deleteProduct, decreaseQuantity, increaseQuantity, total, setTotal } = useContext(Context)
+
+    useEffect(() => {
+        const newTotal = basket.reduce((arr, item) => arr + item.price * item.quantity, 0);
+        setTotal(newTotal)
+    }, [basket])
+
 
     return (
         <>
@@ -49,6 +55,10 @@ const Basket = () => {
                                 ))
                             }
                         </div>
+                        <div className="total">
+                            <span className='total_text'>Toplam: </span>
+                            <b className='total_price'> {total}</b>
+                        </div>
                         <NavLink to={basket.length <= 0 ? undefined : "/confirm"} className='confirmButton'>Sepeti Onayla</NavLink>
                     </div>
 
@@ -56,5 +66,4 @@ const Basket = () => {
         </>
     )
 }
-
 export default Basket

@@ -1,6 +1,8 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useLocation } from "react-router-dom";
+import { NavbarRoutes } from "./routes/NavbarRoutes";
+import { PATHS } from "./routes/Routes";
 
 //introduction
 gsap.registerPlugin(ScrollTrigger);
@@ -83,7 +85,7 @@ export const GetUrlInfo = () => {
 }
 
 export const NavbarRouteMapper = (url) => {
-    if (url === "/")
+    if (url === PATHS.DEFAULT)
         return "Ürün Hakkında"
-    else return "Confirm"
+    else return "Sepeti Onayla"
 }
