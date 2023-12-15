@@ -39,7 +39,7 @@ const ContextProvider = ({ children }) => {
     const deleteProduct = (product) => {
         const newBasket = basket.filter(item => item.id !== product.id)
         setBasket(newBasket)
-        setAmount(prevAmount => prevAmount - 1)
+        setAmount(prevAmount => prevAmount - product.quantity)
     }
 
     const value = {
