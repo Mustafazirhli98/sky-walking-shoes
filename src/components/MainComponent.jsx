@@ -14,7 +14,7 @@ const MainComponent = () => {
     useEffect(() => {
         setUpperButton(false)
     }, [])
-    
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 600) {
@@ -33,11 +33,14 @@ const MainComponent = () => {
             <Title />
             <Introduction />
             <Market />
-            <div className={upperButton ? "upperButton" : ""}>
-                <Link to="title" spy={true} smooth={true} offset={-200} duration={500} >
-                    <FontAwesomeIcon icon={faArrowUp} />
-                </Link>
-            </div>
+            <Link to="title"
+                className={upperButton ? "upperButton" : ""}
+                spy={true}
+                smooth={true}
+                offset={-200}
+                duration={500} >
+                <FontAwesomeIcon icon={faArrowUp} />
+            </Link>
         </>
     )
 }
