@@ -4,6 +4,7 @@ import { Context } from '../../Context'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
+import { PATHS } from '../../routes/Routes'
 
 const Confirm = () => {
     const { total, orderState, setOrderState } = useContext(Context)
@@ -48,8 +49,8 @@ const Confirm = () => {
                                 <p>Fatura bilgilendirmesi için mail adresinizi kontrol edin.</p>
                             </div>
                             <div className='orderDone_links'>
-                                <NavLink className={'orderDone_links_link'}>Ana Sayfa</NavLink>
-                                <NavLink className={'orderDone_links_link'}>Alışverişe devam edin!</NavLink>
+                                <NavLink to={PATHS.DEFAULT} className={'orderDone_links_link'}>Ana Sayfa</NavLink>
+                                <NavLink to={PATHS.MARKET_PLACE} className={'orderDone_links_link'}>Alışverişe devam edin!</NavLink>
                             </div>
                         </div>
                     </>
