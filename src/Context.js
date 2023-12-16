@@ -8,7 +8,11 @@ const ContextProvider = ({ children }) => {
     const [urlLocation, setUrlLocation] = useState("");
     const [upperButton, setUpperButton] = useState(false);
     const [total, setTotal] = useState(0);
-    const [orderState, setOrderState] = useState(true);
+    const [orderState, setOrderState] = useState(false);
+    const [userInfo, setUserInfo] = useState({})
+    const [firstInputAlert, setFirstInputAlert] = useState("")
+    const [secondInputAlert, setSecondInputAlert] = useState("")
+    const [thirdInputAlert, setThirdInputAlert] = useState("")
 
     const addBasket = (product) => {
         if (!basket.find(item => item.id === product.id)) {
@@ -42,9 +46,32 @@ const ContextProvider = ({ children }) => {
         setAmount(prevAmount => prevAmount - product.quantity)
     }
 
+    const confirmProcess = () => {
+        setBasket([])
+        setAmount(0)
+        setTotal(0)
+        setOrderState(true)
+        setUserInfo({})
+    }
+
+    const checkAlert = () => {
+        if (!userInfo.name)
+            setFirstInputAlert("Zorunlu alan")
+        if (!userInfo.lastName)
+            setSecondInputAlert("Zorunlu alan")
+        if (!userInfo.password)
+            setThirdInputAlert("Zorunlu alan")
+        if (userInfo.name && userInfo.lastName && userInfo.password) {
+            confirmProcess()
+        }
+    }
+
+
+
     const value = {
         basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation,
-        upperButton, setUpperButton, decreaseQuantity, increaseQuantity, total, setTotal, orderState, setOrderState
+        upperButton, setUpperButton, decreaseQuantity, increaseQuantity, total, setTotal, orderState,
+        setOrderState, confirmProcess, userInfo, setUserInfo, checkAlert, firstInputAlert, secondInputAlert, thirdInputAlert
     }
 
     return (

@@ -12,10 +12,9 @@ import { NavbarRoutes } from '../routes/NavbarRoutes'
 const Navbar = () => {
     const [lowOpacity, setLowOpacity] = useState(false);
     const [isFlip, setIsFlip] = useState(false);
-    const { basket, amount } = useContext(Context);
+    const { amount } = useContext(Context);
     const currentURL = GetUrlInfo();
     const [innerHeight, setInnerHeight] = useState(0);
-
 
     //#region useEffects
     useEffect(() => {
@@ -61,20 +60,12 @@ const Navbar = () => {
                                 NavbarRouteMapper(currentURL)
                             }
                         </Link> :
-                        <>
-                            <NavLink to={basket.length <= 0 ? undefined : PATHS.CONFIRM}
-                                className={`confirmNav-button ${basket.length <= 0 ? "notAllowed" : ""}`}>
-                                {
-                                    NavbarRouteMapper(currentURL)
-                                }
-                            </NavLink>
-                            <NavLink to={NavbarRoutes.MARKET_PLACE}
-                                className={`marketNav-button`}>
-                                {
-                                    Object.values(NavbarRoutes.MARKET_PLACE)
-                                }
-                            </NavLink>
-                        </>
+                        <NavLink to={NavbarRoutes.MARKET_PLACE}
+                            className={`marketNav-button`}>
+                            {
+                                Object.values(NavbarRoutes.MARKET_PLACE)
+                            }
+                        </NavLink>
                 }
                 <NavLink
                     to={PATHS.BASKET}>

@@ -80,7 +80,7 @@ export const creditCardAnimation = () => {
 export const ordercheckAnimation = () => {
     gsap.to(".order-check", {
         rotateY: 360,
-        duration: 2
+        duration: 0.5
     })
 }
 //navbar routes

@@ -799,6 +799,17 @@ body {
 }
 
 /* CONFIRM */
+.input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-area span {
+    font-size: 10px;
+    color: red;
+}
 
 .confirmPage {
     width: 100%;
@@ -906,7 +917,7 @@ body {
     }
 }
 
-/* orderDone */
+/* bridge*/
 
 .orderDone {
     display: flex;
@@ -917,6 +928,7 @@ body {
 
 .order-check {
     color: var(--primary-color3);
+    margin-bottom: 10px;
 }
 
 .order-Info {
@@ -955,4 +967,14 @@ body {
         text-align: center;
     }
 
+}
+
+.bridge {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
 }
