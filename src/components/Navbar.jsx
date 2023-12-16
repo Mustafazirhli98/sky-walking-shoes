@@ -67,7 +67,7 @@ const Navbar = () => {
                                 }
                             </NavLink>
                             <NavLink to={NavbarRoutes.MARKET_PLACE}
-                                className={`confirmNav-button`}>
+                                className={`marketNav-button`}>
                                 {
                                     Object.values(NavbarRoutes.MARKET_PLACE)
                                 }
