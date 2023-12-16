@@ -66,8 +66,6 @@ const ContextProvider = ({ children }) => {
         }
     }
 
-
-
     const value = {
         basket, setBasket, addBasket, deleteProduct, amount, setAmount, urlLocation, setUrlLocation,
         upperButton, setUpperButton, decreaseQuantity, increaseQuantity, total, setTotal, orderState,

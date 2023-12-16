@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { data } from '../../Data/Store'
 import { Context } from '../../Context'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const MarketPlace = () => {
     const { addBasket } = useContext(Context)
@@ -18,7 +20,7 @@ const MarketPlace = () => {
                             <img src={product.img} alt='product' />
                             <div className="product-card_detail">
                                 <h5>{product.description}</h5>
-                                <div>{product.price}</div>
+                                <div>{product.price} ₺</div>
                                 <div className='add-Basket' onClick={() => {
                                     addBasket(product)
                                 }}>Sepete ekle</div>
@@ -29,9 +31,17 @@ const MarketPlace = () => {
             </div>
             <div className="footer">
                 <ul>
-                    <li>twitter</li>
-                    <li>instagram</li>
-                    <li>facebook</li>
+                    <ul>
+                    <li>
+                        <FontAwesomeIcon icon={faXTwitter} size="lg" />
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon={faInstagram} size="lg" />
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                    </li>
+                </ul>
                 </ul>
             </div>
         </div>

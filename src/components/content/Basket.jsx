@@ -48,7 +48,7 @@ const Basket = () => {
                                             <img src={product.img} alt='product' />
                                             <div className="product-detail">
                                                 <h5>{product.description}</h5>
-                                                <span>{product.price}</span>
+                                                <span>{product.price} ₺</span>
                                             </div>
                                         </div>
                                     </div>

@@ -808,7 +808,7 @@ body {
 
 .input-area span {
     font-size: 10px;
-    color: red;
+    color: var(--primary-color1);
 }
 
 .confirmPage {

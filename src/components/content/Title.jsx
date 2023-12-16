@@ -11,7 +11,7 @@ const Title = () => {
     return (
         <div className='title'>
             <div className='title_text' >
-                <h4>Merhaba ayakkabı tutlunları!</h4>
+                <h4>Merhaba ayakkabı tutkunları!</h4>
                 <p>Sizi, adımlarınızı gökyüzünde atmaya davet ediyoruz! Gökyüzü Yürüyüş Ayakkabıları, sadece bir adım ötesinde bulutları hissetmenizi sağlayan yenilikçi bir ayakkabı deneyimidir.</p>
             </div>
             <div className='title_img'>

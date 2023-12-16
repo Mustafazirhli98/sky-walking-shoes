@@ -27,7 +27,7 @@ const Market = () => {
                             <img src={product.img} alt='product' />
                             <div className="product-card_detail">
                                 <h5>{product.description}</h5>
-                                <div>{product.price}</div>
+                                <div>{product.price} ₺</div>
                                 <div className='add-Basket' onClick={() => {
                                     addBasket(product)
                                 }}>Sepete ekle</div>

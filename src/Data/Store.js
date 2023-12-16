@@ -11,13 +11,13 @@ export const data = [
     {
         img: img1,
         description: "Özel hızlı ayakkabı",
-        price: 4000,
+        price: 5000,
         id: 1
     },
     {
         img: img2,
         description: "Isıtıcılı uçan ayakkabı",
-        price: 5000,
+        price: 7000,
         id: 2
     },
     {

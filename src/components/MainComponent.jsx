@@ -10,6 +10,11 @@ import { Context } from '../Context'
 const MainComponent = () => {
 
     const { upperButton, setUpperButton } = useContext(Context)
+
+    useEffect(() => {
+        setUpperButton(false)
+    }, [])
+    
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 600) {

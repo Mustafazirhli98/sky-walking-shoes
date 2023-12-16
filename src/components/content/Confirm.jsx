@@ -11,10 +11,12 @@ const Confirm = () => {
         userInfo, setUserInfo, firstInputAlert, secondInputAlert,
         thirdInputAlert } = useContext(Context)
     useEffect(() => {
-        creditCardAnimation();
-        if (orderState) ordercheckAnimation();
         setOrderState(false)
     }, [])
+    useEffect(() => {
+        creditCardAnimation();
+        if (orderState) ordercheckAnimation();
+    }, [orderState])
 
     return (
         <>

@@ -6,13 +6,9 @@ import MainComponent from './components/MainComponent';
 import Navbar from './components/Navbar';
 import MarketPlace from './components/content/MarketPlace';
 import Confirm from './components/content/Confirm';
-import { useContext } from 'react';
-import { Context } from './Context';
 
 
 function App() {
-
-  const { orderState } = useContext(Context)
 
   return (
     <div className="container">
