@@ -14,6 +14,7 @@ const Navbar = () => {
     const [isFlip, setIsFlip] = useState(false);
     const { basket, amount } = useContext(Context);
     const currentURL = GetUrlInfo();
+    const [innerHeight, setInnerHeight] = useState(0);
 
 
     //#region useEffects
@@ -25,6 +26,7 @@ const Navbar = () => {
     }, [lowOpacity])
 
     useEffect(() => {
+        setInnerHeight(window.innerHeight) //mobile boyutta sepet animasyonunu click ile çalıştırmak için
         const handleScroll = () => {
             if (window.scrollY > 100) setLowOpacity(true)
             else setLowOpacity(false)
@@ -77,7 +79,15 @@ const Navbar = () => {
                 <NavLink
                     to={PATHS.BASKET}>
                     <FontAwesomeIcon
-                        onMouseEnter={() => setIsFlip(!isFlip)}
+                        onMouseEnter={() => innerHeight > 700 ? setIsFlip(!isFlip) : ""}
+                        onClick={() => {
+                            if (innerHeight < 700) {
+                                setIsFlip(!isFlip)
+                                setTimeout(() => {
+                                    setIsFlip(false)
+                                }, 2000)
+                            }
+                        }}
                         onMouseLeave={() => setIsFlip(!isFlip)}
                         className="basketIcon"
                         flip={isFlip}

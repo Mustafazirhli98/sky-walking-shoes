@@ -30,8 +30,4 @@ export default App;
 
 //TODO:
 //satın alma butonu ile satın alma işlevi ve animasyonu ekle. Eğer kullanıcı bilgisi girilmediyse bilgi istesin.
-//Responsive
 //refactoring.
-//Videosunu çekip md dosyasına aktar.
-//Proje sonu commitini yap.
-//Projeyi yayınla.

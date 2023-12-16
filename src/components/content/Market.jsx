@@ -1,5 +1,5 @@
-import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import React, { useContext, useEffect, useState } from 'react'
 import { marketAnimation } from '../../utils'
 import { data } from '../../Data/Store'
@@ -38,9 +38,15 @@ const Market = () => {
             </div>
             <div className="footer">
                 <ul>
-                    <li>twitter</li>
-                    <li>instagram</li>
-                    <li>facebook</li>
+                    <li>
+                        <FontAwesomeIcon icon={faXTwitter} size="lg" />
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon={faInstagram} size="lg" />
+                    </li>
+                    <li>
+                        <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                    </li>
                 </ul>
             </div>
         </div>

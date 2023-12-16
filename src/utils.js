@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { NavbarRoutes } from "./routes/NavbarRoutes";
 import { PATHS } from "./routes/Routes";
 
-//introduction
+//introduction animation
 gsap.registerPlugin(ScrollTrigger);
 
 export const introductionAnimation = () => {
@@ -19,7 +19,7 @@ export const introductionAnimation = () => {
         .fromTo(".info", { opacity: 0 }, { opacity: 1, duration: 10, ease: "in", stagger: 10 });
 };
 
-//title
+//title animation
 export const titleAnimation = () => {
     gsap.fromTo(".title", {
         x: -100,
@@ -44,7 +44,7 @@ export const titleAnimation = () => {
     })
 }
 
-//market
+//market animation
 export const marketAnimation = () => {
     gsap.registerPlugin(ScrollTrigger);
     const triggerElement = ".market";
@@ -69,7 +69,7 @@ export const marketAnimation = () => {
     );
 };
 
-//credit-card
+//credit-card animation
 export const creditCardAnimation = () => {
     gsap.to(".credit-card", {
         rotationX: 360,
@@ -77,6 +77,12 @@ export const creditCardAnimation = () => {
     })
 }
 
+export const ordercheckAnimation = () => {
+    gsap.to(".order-check", {
+        rotateY: 360,
+        duration: 2
+    })
+}
 //navbar routes
 
 export const GetUrlInfo = () => {

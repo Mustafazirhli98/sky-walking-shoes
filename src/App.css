@@ -224,6 +224,13 @@ body {
         margin: 40px 10px;
         font-size: 17px;
     }
+
+    .upperButton {
+        top: 93%;
+        left: 90%;
+        background-color: var(--primary-color2);
+        opacity: 0.7;
+    }
 }
 
 
@@ -554,8 +561,10 @@ body {
     }
 
     .market-content p {
-        margin-bottom: 50px;
-        font-size: 17px;
+        margin-bottom: 30px;
+        font-size: 15px;
+        text-align: center;
+        padding: 0px 15px;
     }
 
 
@@ -785,7 +794,7 @@ body {
 
     .total {
         color: var(--primary-color1);
-        margin-top: 20px;
+        margin-top: 40px;
     }
 }
 
@@ -895,4 +904,55 @@ body {
     .credit-card input {
         font-size: 10px;
     }
+}
+
+/* orderDone */
+
+.orderDone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-check {
+    color: var(--primary-color3);
+}
+
+.order-Info {
+    text-align: center;
+    color: var(--primary-color2);
+}
+
+.order-Info p {
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.orderDone_links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.orderDone_links_link {
+    width: auto;
+    margin-top: 5px;
+    color: var(--primary-color3);
+}
+
+.orderDone_links_link:hover {
+    color: var(--primary-color2);
+}
+
+@media screen and (max-width:700px) {
+    .orderDone_links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        text-align: center;
+    }
+
 }
