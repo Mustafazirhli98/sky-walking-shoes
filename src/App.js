@@ -28,7 +28,5 @@ export default App;
 
 
 //TODO:
-//mobilde kart boyları uyumsuz bunu düzelt.
-//kredi kartı rotate animasyonu değiştir.
 //mobilde sepet animasyonu sürekli flip oluyor. Düzelt.
 //refactoring.

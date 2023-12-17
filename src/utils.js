@@ -71,10 +71,13 @@ export const marketAnimation = () => {
 
 //credit-card animation
 export const creditCardAnimation = () => {
-    gsap.to(".credit-card", {
-        rotationX: 360,
+    gsap.fromTo(".credit-card", {
+        x: 800,
         duration: 2,
-    })
+    },
+        {
+            x: 0
+        })
 }
 
 export const ordercheckAnimation = () => {

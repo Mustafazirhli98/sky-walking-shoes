@@ -22,7 +22,7 @@ export const data = [
     },
     {
         img: img3,
-        description: "Uzaktan kumandalı ayakkabı",
+        description: "Kumandalı ayakkabı",
         price: 4000,
         id: 3
     },

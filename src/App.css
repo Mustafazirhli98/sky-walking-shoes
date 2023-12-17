@@ -496,7 +496,10 @@ body {
 .product-card_detail {
     margin: 10px;
     text-align: center;
+    /* width: 50px; */
+    /* height: 90px; */
 }
+
 
 .product-card_detail h5 {
     margin: 6px;
