@@ -55,7 +55,6 @@ const ContextProvider = ({ children }) => {
         setOrderState(true)
         setUserInfo({})
     }
-
     const checkAlert = () => {
         if (!userInfo.name)
             setFirstInputAlert("Zorunlu alan")
