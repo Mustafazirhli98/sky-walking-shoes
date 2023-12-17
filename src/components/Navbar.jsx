@@ -62,7 +62,9 @@ const Navbar = () => {
                             }
                         </Link> :
                         <NavLink to={NavbarRoutes.MARKET_PLACE}
-                            className={`marketNav-button`}>
+                            className={`marketNav-button`}
+                            style={{ backgroundColor: GetUrlInfo() === PATHS.MARKET_PLACE ? "#6d65a4" : "" }}
+                        >
                             {
                                 Object.values(NavbarRoutes.MARKET_PLACE)
                             }

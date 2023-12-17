@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import image from "../../assets/images/image.jpeg"
-import { titleAnimation } from '../../utils'
+import { logoAnimation, titleAnimation } from '../../utils'
 
 const Title = () => {
 

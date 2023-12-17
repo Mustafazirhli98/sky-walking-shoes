@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import { logoAnimation } from '../../utils'
 
 const LogoSVG = () => {
-
+    
     useEffect(() => {
         logoAnimation()
     }, [])
+
     return (
         <svg className='logoSVG' version="1.0" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1024.000000 1024.000000"
