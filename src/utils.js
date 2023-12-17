@@ -87,7 +87,7 @@ export const ordercheckAnimation = () => {
 }
 
 export const logoAnimation = () => {
-    gsap.to(".logo", {
+    gsap.to(".logoSVG", {
         rotateY: 360,
         duration: 1.5
     })
