@@ -10,7 +10,8 @@ const Basket = () => {
 
     useEffect(() => {
         const newTotal = basket.reduce((arr, item) => arr + item.price * item.quantity, 0);
-        setTotal(newTotal)
+        const formattedTotal = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 }).format(newTotal);
+        setTotal(formattedTotal)
     }, [basket, setTotal])
 
 
