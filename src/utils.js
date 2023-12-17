@@ -85,6 +85,10 @@ export const ordercheckAnimation = () => {
         rotateY: 360,
         duration: 0.5
     })
+    gsap.to(".logo", {
+        rotateY: 360,
+        duration: 1.5
+    })
 }
 //navbar routes
 

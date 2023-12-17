@@ -28,5 +28,4 @@ export default App;
 
 
 //TODO:
-//mobilde sepet animasyonu sürekli flip oluyor. Düzelt.
 //refactoring.

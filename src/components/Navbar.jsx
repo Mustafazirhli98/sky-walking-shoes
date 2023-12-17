@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom'
 import { Context } from '../Context'
 import { GetUrlInfo, NavbarRouteMapper } from '../utils'
 import { NavbarRoutes } from '../routes/NavbarRoutes'
+import LogoSVG from '../assets/SVG/LogoSVG'
 
 const Navbar = () => {
     const [lowOpacity, setLowOpacity] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
             <NavLink
                 to={PATHS.DEFAULT}
                 className="logo">
-                LuminovaStride
+                <LogoSVG />
             </NavLink>
             <div className="links">
                 {
@@ -70,9 +71,10 @@ const Navbar = () => {
                 <NavLink
                     to={PATHS.BASKET}>
                     <FontAwesomeIcon
-                        onMouseEnter={() => innerWidth > 700 ? setIsFlip(!isFlip) : ""}
-                        onClick={() => {
-                            if (innerWidth < 700) {
+                        onMouseEnter={() => {
+                            if (innerWidth > 700) {
+                                setIsFlip(!isFlip)
+                            } else if (innerWidth < 700) {
                                 setIsFlip(!isFlip)
                                 setTimeout(() => {
                                     setIsFlip(false)
@@ -80,7 +82,13 @@ const Navbar = () => {
                                 }, 1000)
                             }
                         }}
-                        onMouseLeave={() => setIsFlip(!isFlip)}
+                        onMouseLeave={() => {
+                            setIsFlip(!isFlip)
+                            if (innerWidth < 700) {
+                                setIsFlip(false)
+                                //leave olayı mobilde sorun çıkarıyor. Bu yüzden setFlip(false) ile kontrole aldık.
+                            }
+                        }}
                         className="basketIcon"
                         flip={isFlip}
                         icon={faBasketShopping}

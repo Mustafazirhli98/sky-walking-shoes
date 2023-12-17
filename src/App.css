@@ -66,14 +66,14 @@ body {
     z-index: 999;
 }
 
-.logo {
-    color: #fff;
-    font-size: 25px;
-    cursor: pointer;
+.logoSVG {
+    width: 100px;
+    height: 100px;
+    fill: #ffffffe9;
 }
 
-.logo:hover {
-    font-size: 27px;
+.logo {
+    cursor: pointer;
 }
 
 .basketIcon {
@@ -158,14 +158,13 @@ body {
         height: 80px;
     }
 
-    .logo {
-        color: #fff;
-        font-size: 15px;
-        cursor: pointer;
+    .logoSVG {
+        width: 100px;
+        height: 60px;
     }
 
-    .logo:hover {
-        font-size: 15px;
+    .logo {
+        cursor: pointer;
     }
 
     .basketIcon {
