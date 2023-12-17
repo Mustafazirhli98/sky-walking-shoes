@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useLocation } from "react-router-dom";
-import { NavbarRoutes } from "./routes/NavbarRoutes";
 import { PATHS } from "./routes/Routes";
 
 //introduction animation
@@ -85,6 +84,9 @@ export const ordercheckAnimation = () => {
         rotateY: 360,
         duration: 0.5
     })
+}
+
+export const logoAnimation = () => {
     gsap.to(".logo", {
         rotateY: 360,
         duration: 1.5

@@ -11,6 +11,7 @@ const Market = () => {
 
     useEffect(() => {
         marketAnimation()
+        console.log("adsf")
     }, []);
 
     return (

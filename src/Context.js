@@ -3,16 +3,18 @@ import React, { createContext, useState } from 'react'
 const Context = createContext();
 
 const ContextProvider = ({ children }) => {
+    //#region states
     const [basket, setBasket] = useState([]);
     const [amount, setAmount] = useState(0);
     const [urlLocation, setUrlLocation] = useState("");
     const [upperButton, setUpperButton] = useState(false);
     const [total, setTotal] = useState(0);
     const [orderState, setOrderState] = useState(false);
-    const [userInfo, setUserInfo] = useState({})
+    const [userInfo, setUserInfo] = useState({});
     const [firstInputAlert, setFirstInputAlert] = useState("")
-    const [secondInputAlert, setSecondInputAlert] = useState("")
-    const [thirdInputAlert, setThirdInputAlert] = useState("")
+    const [secondInputAlert, setSecondInputAlert] = useState("");
+    const [thirdInputAlert, setThirdInputAlert] = useState("");
+    //#endregion
 
     const addBasket = (product) => {
         if (!basket.find(item => item.id === product.id)) {

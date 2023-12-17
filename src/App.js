@@ -25,7 +25,3 @@ function App() {
 }
 
 export default App;
-
-
-//TODO:
-//refactoring.
